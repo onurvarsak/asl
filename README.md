@@ -1,5 +1,8 @@
 # 🚚 ALS AKNUR GmbH - Website
 
+[![Deploy to Production](https://github.com/onurvarsak/asl/actions/workflows/deploy.yml/badge.svg)](https://github.com/onurvarsak/asl/actions/workflows/deploy.yml)
+[![Deploy to Vercel](https://github.com/onurvarsak/asl/actions/workflows/vercel-deploy.yml/badge.svg)](https://github.com/onurvarsak/asl/actions/workflows/vercel-deploy.yml)
+
 Professionelle Logistikdienstleistungen mit modernster Flotte und erfahrenem Team.
 
 ## 🚀 Hızlı Başlangıç
