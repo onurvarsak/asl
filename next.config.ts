@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
-};
+  output: "export",
+  basePath: "/asl",
+  assetPrefix: "/asl/"
+}
 
-export default nextConfig;
+export default nextConfig
