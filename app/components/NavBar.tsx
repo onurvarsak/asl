@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
+import { getImagePath } from "@/app/utils/image"
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,7 +29,7 @@ export default function NavBar() {
             <Link href='/' className='flex items-center'>
               {/* Desktop Logo */}
               <Image
-                src='/images/logo.png'
+                src={getImagePath('/images/logo.png')}
                 alt='Logo'
                 width={113}
                 height={63}
@@ -95,7 +96,7 @@ export default function NavBar() {
               onClick={() => setIsMenuOpen(false)}
             >
               <Image
-                src='/images/logo.png'
+                src={getImagePath('/images/logo.png')}
                 alt='Logo'
                 width={113}
                 height={63}

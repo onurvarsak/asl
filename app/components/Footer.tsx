@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { getImagePath } from "@/app/utils/image"
 
 export default function Footer() {
   const socialLinks = [
@@ -16,7 +17,7 @@ export default function Footer() {
         {/* Logo */}
         <div className='flex-shrink-0'>
           <Image
-            src='/images/logo.png'
+            src={getImagePath('/images/logo.png')}
             alt='ALS GmbH'
             width={200}
             height={80}

@@ -1,23 +1,24 @@
 import Image from "next/image"
+import { getImagePath } from "@/app/utils/image"
 
 export default function ValueCardsSection() {
   const values = [
     {
-      icon: "/images/objects-1.png",
+      icon: getImagePath("/images/objects-1.png"),
       title: "Stabilität",
       subtitle: "Sichere Perspektive",
       description:
         "Wir bieten langfristige Arbeitsverhältnisse, faire Bedingungen und ein solides Unternehmensfundament, das seit 2006 stetig wächst."
     },
     {
-      icon: "/images/objects-2.png",
+      icon: getImagePath("/images/objects-2.png"),
       title: "Entwicklung",
       subtitle: "Wachstum Möglich",
       description:
         "Bei uns haben Sie die Möglichkeit, sich fachlich weiterzuentwickeln, neue Aufgaben zu übernehmen und mit der Firma gemeinsam zu wachsen."
     },
     {
-      icon: "/images/objects-3.png",
+      icon: getImagePath("/images/objects-3.png"),
       title: "Teamgeist",
       subtitle: "Gemeinsam Stark",
       description:

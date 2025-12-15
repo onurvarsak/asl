@@ -1,3 +1,4 @@
+import { getImagePath } from "@/app/utils/image"
 import Image from "next/image"
 
 export default function LocationsSection() {
@@ -23,7 +24,7 @@ export default function LocationsSection() {
               {/* Location Pin Icon */}
               <div className='mb-6'>
                 <Image
-                  src='/images/location.png'
+                  src={getImagePath('/images/location.png')}
                   alt='Location'
                   width={60}
                   height={60}

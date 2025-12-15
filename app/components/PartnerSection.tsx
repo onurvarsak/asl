@@ -1,28 +1,29 @@
 import Image from "next/image"
+import { getImagePath } from "@/app/utils/image"
 
 export default function PartnerSection() {
   const partners = [
     {
       name: "Rhenus Logistics",
-      logo: "/images/logo-rhenusl 1.png",
+      logo: getImagePath("/images/logo-rhenusl 1.png"),
       width: 300,
       height: 100
     },
     {
       name: "AMM",
-      logo: "/images/logo-amm.png",
+      logo: getImagePath("/images/logo-amm.png"),
       width: 300,
       height: 100
     },
     {
       name: "Obeta Eldis Häusler",
-      logo: "/images/logo-obeta.jpg",
+      logo: getImagePath("/images/logo-obeta.jpg"),
       width: 300,
       height: 100
     },
     {
       name: "Hellmann Worldwide Logistics",
-      logo: "/images/logo-hellmann.png",
+      logo: getImagePath("/images/logo-hellmann.png"),
       width: 434,
       height: 222
     }

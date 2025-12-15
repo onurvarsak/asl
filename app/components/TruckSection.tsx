@@ -1,21 +1,22 @@
 import Image from "next/image"
+import { getImagePath } from "@/app/utils/image"
 
 export default function TruckSection() {
   const services = [
     {
-      image: "/images/truck-1.png",
+      image: getImagePath("/images/truck-1.png"),
       title: "Nationaler Transport",
       description:
         "Zuverlässige und pünktliche Transportlösungen innerhalb ganz Deutschlands."
     },
     {
-      image: "/images/truck-2.png",
+      image: getImagePath("/images/truck-2.png"),
       title: "Internationaler Transport",
       description:
         "Sichere und effiziente Routenplanung für Logistikoperationen innerhalb Europas."
     },
     {
-      image: "/images/truck-3.png",
+      image: getImagePath("/images/truck-3.png"),
       title: "Teil - Und Komplettladungen (LTL/FTL)",
       description:
         "Flexible Optionen für sowohl kleinere als auch vollständige Ladungen."
