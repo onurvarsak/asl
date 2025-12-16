@@ -43,7 +43,10 @@ export default function ValueCardsSection() {
                     alt={value.title}
                     width={120}
                     height={120}
-                    className='object-contain'
+                    priority
+                    sizes='100vw'
+                    quality={90}
+                    className='object-cover'
                   />
                 </div>
 

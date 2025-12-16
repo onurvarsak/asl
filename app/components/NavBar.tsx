@@ -29,11 +29,14 @@ export default function NavBar() {
             <Link href='/' className='flex items-center'>
               {/* Desktop Logo */}
               <Image
-                src={getImagePath('/images/logo.png')}
+                src={getImagePath("/images/logo.png")}
                 alt='Logo'
                 width={113}
                 height={63}
-                className='object-contain'
+                priority
+                sizes='100vw'
+                quality={90}
+                className='object-cover'
               />
             </Link>
           </div>
@@ -96,11 +99,14 @@ export default function NavBar() {
               onClick={() => setIsMenuOpen(false)}
             >
               <Image
-                src={getImagePath('/images/logo.png')}
+                src={getImagePath("/images/logo.png")}
                 alt='Logo'
                 width={113}
                 height={63}
-                className='object-contain'
+                priority
+                sizes='100vw'
+                quality={90}
+                className='object-cover'
               />
             </Link>
 

@@ -6,45 +6,63 @@ export default function TopSection() {
     <section className='relative w-full h-[628px] overflow-hidden'>
       {/* Mobile image */}
       <Image
-        src={getImagePath('/images/truck-sm.png')}
+        src={getImagePath("/images/truck-sm.png")}
         alt='Banner'
         fill
-        className='md:hidden'
+        priority
+        sizes='100vw'
+        quality={90}
+        className='object-cover md:hidden'
       />
       {/* MD image */}
       <Image
-        src={getImagePath('/images/truck-md.png')}
+        src={getImagePath("/images/truck-md.png")}
         alt='Banner'
         fill
-        className='hidden md:block lg:hidden'
+        priority
+        sizes='100vw'
+        quality={90}
+        className='object-cover hidden md:block lg:hidden'
       />
       {/* LG image */}
       <Image
-        src={getImagePath('/images/truck-lg.png')}
+        src={getImagePath("/images/truck-lg.png")}
         alt='Banner'
         fill
-        className='hidden lg:block xl:hidden'
+        priority
+        sizes='100vw'
+        quality={90}
+        className='object-cover hidden lg:block xl:hidden'
       />
       {/* XL image */}
       <Image
-        src={getImagePath('/images/truck-xl.png')}
+        src={getImagePath("/images/truck-xl.png")}
         alt='Banner'
         fill
-        className='hidden xl:block 2xl:hidden'
+        priority
+        sizes='100vw'
+        quality={90}
+        className='object-cover hidden xl:block 2xl:hidden'
       />
       {/* 2XL image */}
       <Image
-        src={getImagePath('/images/truck-2xl.png')}
+        src={getImagePath("/images/truck-2xl.png")}
         alt='Banner'
         fill
-        className='hidden 2xl:block min-[1800px]:hidden'
+        priority
+        sizes='100vw'
+        quality={90}
+        className='object-cover hidden 2xl:block min-[1800px]:hidden'
       />
       {/* 1800px and up image */}
       <Image
-        src={getImagePath('/images/truck-1800.png')}
+        src={getImagePath("/images/truck-1800.png")}
         alt='Banner'
         fill
-        className='hidden min-[1800px]:block'
+        priority
+        sizes='100vw'
+        quality={90}
+        className='object-cover hidden min-[1800px]:block'
       />
       {/* Dark overlay for better text readability */}
       <div className='absolute inset-0 bg-black/30' />

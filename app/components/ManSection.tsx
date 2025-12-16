@@ -3,44 +3,93 @@ import Image from "next/image"
 
 export default function ManSection() {
   return (
-    <section className='relative w-full bg-white h-[356px] md:h-[440px] overflow-hidden'>
-      <Image
-        src={getImagePath('/images/man-sm.png')}
-        alt='Man'
-        fill
-        className='object-fill md:hidden'
-        priority
-      />
-      <Image
-        src={getImagePath('/images/man-md.png')}
-        alt='Man'
-        fill
-        className='object-fill hidden md:block lg:hidden'
-      />
-      <Image
-        src={getImagePath('/images/man-lg.png')}
-        alt='Man'
-        fill
-        className='object-fill hidden lg:block xl:hidden'
-      />
-      <Image
-        src={getImagePath('/images/man-xl.png')}
-        alt='Man'
-        fill
-        className='object-fill hidden xl:block 2xl:hidden'
-      />
-      <Image
-        src={getImagePath('/images/man-2xl.png')}
-        alt='Man'
-        fill
-        className='object-fill hidden 2xl:block 3xl:hidden'
-      />
-      <Image
-        src={getImagePath('/images/man-1800.png')}
-        alt='Man'
-        fill
-        className='object-fill hidden 3xl:block'
-      />
+    <section className='relative w-full bg-white  overflow-hidden'>
+      {/* 300px altı */}
+      <div className='relative w-full h-auto min-[300px]:hidden'>
+        <Image
+          src={getImagePath("/images/man-300.png")}
+          alt='Man'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={300}
+          height={167}
+        />
+      </div>
+      {/* 300px - md arası */}
+      <div className='relative w-full h-auto hidden min-[300px]:block md:hidden'>
+        <Image
+          src={getImagePath("/images/man-sm.png")}
+          alt='Man'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={640}
+          height={356}
+        />
+      </div>
+      <div className='relative w-full h-auto hidden md:block lg:hidden'>
+        <Image
+          src={getImagePath("/images/man-md.png")}
+          alt='Man'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={768}
+          height={356}
+        />
+      </div>
+      <div className='relative w-full h-auto hidden lg:block xl:hidden'>
+        <Image
+          src={getImagePath("/images/man-lg.png")}
+          alt='Man'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1024}
+          height={356}
+        />
+      </div>
+      <div className='relative w-full h-auto hidden xl:block 2xl:hidden'>
+        <Image
+          src={getImagePath("/images/man-xl.png")}
+          alt='Man'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1280}
+          height={356}
+        />
+      </div>
+      <div className='relative w-full h-auto hidden 2xl:block 3xl:hidden'>
+        <Image
+          src={getImagePath("/images/man-2xl.png")}
+          alt='Man'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1536}
+          height={356}
+        />
+      </div>
+      <div className='relative w-full h-auto hidden 3xl:block'>
+        <Image
+          src={getImagePath("/images/man-1800.png")}
+          alt='Man'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1800}
+          height={356}
+        />
+      </div>
       <div className='relative z-10'>{/* İçerik buraya eklenecek */}</div>
     </section>
   )

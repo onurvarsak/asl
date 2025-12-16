@@ -51,7 +51,10 @@ export default function PartnerSection() {
                 alt={partner.name}
                 width={partner.width}
                 height={partner.height}
-                className='object-contain max-w-full max-h-full'
+                priority
+                sizes='100vw'
+                quality={90}
+                className='object-cover max-w-full max-h-full'
               />
             </div>
           ))}

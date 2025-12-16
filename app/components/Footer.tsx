@@ -21,7 +21,10 @@ export default function Footer() {
             alt='ALS GmbH'
             width={200}
             height={80}
-            className='object-contain'
+            priority
+            sizes='100vw'
+            quality={90}
+            className='object-cover'
           />
         </div>
 

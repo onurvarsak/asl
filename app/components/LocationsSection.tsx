@@ -24,11 +24,14 @@ export default function LocationsSection() {
               {/* Location Pin Icon */}
               <div className='mb-6'>
                 <Image
-                  src={getImagePath('/images/location.png')}
+                  src={getImagePath("/images/location.png")}
                   alt='Location'
                   width={60}
                   height={60}
-                  className='object-contain'
+                  priority
+                  sizes='100vw'
+                  quality={90}
+                  className='object-cover'
                 />
               </div>
 

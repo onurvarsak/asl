@@ -36,7 +36,10 @@ export default function TruckSection() {
                   alt={service.title}
                   width={300}
                   height={574}
-                  className='w-full h-auto'
+                  priority
+                  sizes='100vw'
+                  quality={90}
+                  className='w-full h-auto object-cover'
                 />
               </div>
             </div>

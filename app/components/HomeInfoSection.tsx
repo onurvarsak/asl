@@ -25,10 +25,10 @@ export default function HomeInfoSection() {
         <div className='grid grid-cols-1 xl:grid-cols-3 gap-[100px] md:gap-8 h-full'>
           {features.map((feature, index) => (
             <div key={index} className='text-center'>
-              <h3 className='text-[66px] font-bold leading-[66px] tracking-[0%] mb-4 text-black text-center'>
+              <h3 className='text-[66px] font-bold leading-[1.2] tracking-[0%] mb-4 text-black text-center break-words hyphens-auto'>
                 {feature.title}
               </h3>
-              <p className='text-[24px] font-light leading-[30px] tracking-[0%] text-center text-gray-700'>
+              <p className='text-[24px] font-light leading-[30px] tracking-[0%] text-center text-gray-700 break-words hyphens-auto'>
                 {feature.description}
               </p>
             </div>
