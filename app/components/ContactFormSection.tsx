@@ -10,11 +10,78 @@ export default function ContactFormSection() {
     phone: "",
     message: ""
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null
+    message: string
+  }>({ type: null, message: "" })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Form submission logic here
-    console.log(formData)
+    setIsSubmitting(true)
+    setSubmitStatus({ type: null, message: "" })
+
+    try {
+      // API'ye form verilerini gönder
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        // Email içeriğini hazırla
+        const subject = `Kontaktformular: ${formData.name}`
+        const body = `
+Name: ${formData.name}
+E-Mail: ${formData.email}
+Firma: ${formData.company}
+Telefon: ${formData.phone}
+
+Nachricht:
+${formData.message}
+        `
+
+        // mailto: linki ile email client'ını aç
+        const mailtoLink = `mailto:info@als-aknurgmbh.com?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}`
+
+        window.location.href = mailtoLink
+
+        setSubmitStatus({
+          type: "success",
+          message:
+            "Ihr E-Mail-Client wird geöffnet. Bitte senden Sie die Nachricht."
+        })
+
+        // Form'u temizle
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: ""
+        })
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message:
+            "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut."
+        })
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut."
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -113,13 +180,27 @@ export default function ContactFormSection() {
             />
           </div>
 
+          {/* Status Message */}
+          {submitStatus.type && (
+            <div
+              className={`text-center p-4 rounded-lg ${
+                submitStatus.type === "success"
+                  ? "bg-green-100 text-green-800"
+                  : "bg-red-100 text-red-800"
+              }`}
+            >
+              {submitStatus.message}
+            </div>
+          )}
+
           {/* Submit Button */}
           <div className='flex justify-center'>
             <button
               type='submit'
-              className='bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-16 rounded-full text-sm uppercase tracking-wide transition-colors'
+              disabled={isSubmitting}
+              className='bg-gray-700 hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-4 px-16 rounded-full text-sm uppercase tracking-wide transition-colors'
             >
-              Nachricht Senden
+              {isSubmitting ? "Wird gesendet..." : "Nachricht Senden"}
             </button>
           </div>
         </form>

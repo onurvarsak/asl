@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { getImagePath } from "@/app/utils/image"
 
 export default function TopSection() {
@@ -52,7 +53,7 @@ export default function TopSection() {
         priority
         sizes='100vw'
         quality={90}
-        className='object-cover hidden 2xl:block min-[1800px]:hidden'
+        className='object-cover hidden 2xl:block 3xl:hidden'
       />
       {/* 1800px and up image */}
       <Image
@@ -62,7 +63,7 @@ export default function TopSection() {
         priority
         sizes='100vw'
         quality={90}
-        className='object-cover hidden min-[1800px]:block'
+        className='object-cover hidden 3xl:block'
       />
       {/* Dark overlay for better text readability */}
       <div className='absolute inset-0 bg-black/30' />
@@ -77,9 +78,11 @@ export default function TopSection() {
             Mit unserer großen Flotte und unserem erfahrenen Team transportieren
             wir Ihre Fracht sicher und pünktlich.
           </p>
-          <button className='bg-transparent border border-white text-white w-[243px] h-[53px] rounded-[26.5px] hover:bg-white hover:text-black transition-all duration-300 font-medium text-lg opacity-100'>
-            Mehr Informationen
-          </button>
+          <Link href='/kontakt'>
+            <button className='bg-transparent border border-white text-white w-[243px] h-[53px] rounded-[26.5px] hover:bg-white hover:text-black hover:scale-105 hover:shadow-xl transition-all duration-300 font-medium text-lg opacity-100 cursor-pointer'>
+              Mehr Informationen
+            </button>
+          </Link>
         </div>
       </div>
     </section>

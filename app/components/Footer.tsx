@@ -17,7 +17,7 @@ export default function Footer() {
         {/* Logo */}
         <div className='flex-shrink-0'>
           <Image
-            src={getImagePath('/images/logo.png')}
+            src={getImagePath("/images/logo.png")}
             alt='ALS GmbH'
             width={200}
             height={80}
@@ -59,6 +59,13 @@ export default function Footer() {
           <div className='text-center lg:text-right'>
             <p className='text-sm'>
               © 2025 ALS-Aknur Logistik Service GmbH: Alle Rechte vorbehalten.
+            </p>
+          </div>
+
+          {/* Developer Credit */}
+          <div className='text-center lg:text-right'>
+            <p className='text-xs text-gray-400'>
+              Entwickelt von Nomad Solutions
             </p>
           </div>
         </div>
