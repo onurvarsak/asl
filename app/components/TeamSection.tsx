@@ -48,22 +48,22 @@ export default function TeamSection() {
                 key={index}
                 className='flex flex-col items-center text-center min-w-[300px] lg:min-w-0'
               >
-                <p className='text-[24px] leading-[30px] font-light text-center mb-2'>
+                <p className='text-[24px] leading-[30px] font-light text-center mb-2 text-[#000000]'>
                   {member.position}
                 </p>
-                <h3 className='text-[58px] leading-[62px] font-bold text-center mb-3'>
+                <h3 className='text-[58px] leading-[62px] font-bold text-center mb-3 text-[#000000]'>
                   {member.name}
                 </h3>
                 <a
                   href={`mailto:${member.email}`}
-                  className='text-[20px] leading-[26px] font-light text-center mb-1 hover:underline'
+                  className='text-[20px] leading-[26px] font-light text-center mb-1 hover:underline text-[#000000]'
                 >
                   {member.email}
                 </a>
                 {member.phone && (
                   <a
                     href={`tel:${member.phone}`}
-                    className='text-base font-bold hover:underline'
+                    className='text-base font-bold hover:underline text-[#000000]'
                   >
                     {member.phone}
                   </a>
@@ -72,7 +72,7 @@ export default function TeamSection() {
             ))}
           </div>
         </div>
-        <p className='text-center text-[21.57px] leading-[26.55px] font-light max-w-4xl mx-auto px-8'>
+        <p className='text-center text-[21.57px] leading-[26.55px] font-light max-w-4xl mx-auto px-8 text-[#000000]'>
           Als Familienunternehmen verbinden wir traditionelle Werte mit moderner
           Logistikkompetenz und legen großen Wert auf langfristige
           Partnerschaften.

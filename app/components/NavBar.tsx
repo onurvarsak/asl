@@ -43,19 +43,23 @@ export default function NavBar() {
 
           {/* Desktop Menu */}
           <div className='hidden lg:flex gap-[76px] h-full items-center mr-[78px] [@media(min-width:1800px)]:mr-[210px]'>
-            {menuItems.map(item => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-white hover:text-gray-300 px-3 h-full flex items-center text-[22px] font-bold font-[family-name:var(--font-poppins)] leading-[100%] tracking-[0%] transition-colors duration-200 relative ${
-                  pathname === item.href
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-white"
-                    : ""
-                }`}
-              >
-                {item.title}
-              </Link>
-            ))}
+            {menuItems.map(item => {
+              const isActive = pathname === item.href
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className='relative h-full flex items-center'
+                >
+                  <span className='text-white hover:text-gray-300 text-[22px] font-bold font-poppins leading-[100%] tracking-[0%] transition-colors duration-200 px-3'>
+                    {item.title}
+                  </span>
+                  {isActive && (
+                    <span className='absolute bottom-0 left-0 w-full h-[4px] bg-white'></span>
+                  )}
+                </Link>
+              )
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -115,25 +119,34 @@ export default function NavBar() {
               onClick={() => setIsMenuOpen(false)}
               className='text-white hover:text-gray-300 focus:outline-none relative w-[30px] h-[30px]'
             >
-              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] rotate-[-45deg]'></div>
+              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] -rotate-45'></div>
               <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] rotate-[-135deg] opacity-100'></div>
             </button>
           </div>
 
           {/* Menu Items */}
           <div className='pl-[42px] md:pl-[62px] pr-[42px] md:pr-[62px] pt-[60px]'>
-            {menuItems.map((item, index) => (
-              <div key={item.href}>
-                <Link
-                  href={item.href}
-                  className='block text-white hover:text-gray-300 font-bold text-[36px] leading-[100%] tracking-[0%] transition-colors duration-200'
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.title}
-                </Link>
-                <div className='h-[1px] bg-white mt-[12px] mb-[47px]'></div>
-              </div>
-            ))}
+            {menuItems.map((item, index) => {
+              const isActive = pathname === item.href
+              return (
+                <div key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`block font-bold text-[36px] leading-[100%] tracking-[0%] transition-colors duration-200 ${
+                      isActive ? "text-white" : "text-white/70 hover:text-white"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
+                  <div
+                    className={`h-px mt-[12px] mb-[47px] ${
+                      isActive ? "bg-white" : "bg-white/30"
+                    }`}
+                  ></div>
+                </div>
+              )
+            })}
           </div>
         </div>
       )}

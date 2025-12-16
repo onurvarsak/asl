@@ -40,10 +40,10 @@ export default function FleetStatsSection() {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 place-items-center'>
           {stats.map((stat, index) => (
             <div key={index} className='flex flex-col items-center'>
-              <h3 className='text-[106px] leading-[106px] font-bold text-center'>
+              <h3 className='text-[106px] leading-[106px] font-bold text-center text-[#000000]'>
                 {stat.number}
               </h3>
-              <p className='text-[24px] leading-[30px] font-bold text-center mt-2 whitespace-pre-line'>
+              <p className='text-[24px] leading-[30px] font-bold text-center mt-2 whitespace-pre-line text-[#000000]'>
                 {stat.description}
               </p>
             </div>

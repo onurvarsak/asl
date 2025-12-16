@@ -51,17 +51,17 @@ export default function ValueCardsSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className='text-[46px] leading-[66px] font-bold mb-4'>
+                <h3 className='text-[46px] leading-[66px] font-bold mb-4 text-[#000000]'>
                   {value.title}
                 </h3>
 
                 {/* Subtitle */}
-                <h4 className='text-[24px] leading-[30px] font-bold mb-4'>
+                <h4 className='text-[24px] leading-[30px] font-bold mb-4 text-[#000000]'>
                   {value.subtitle}
                 </h4>
 
                 {/* Description */}
-                <p className='text-[24px] leading-[30px] font-light'>
+                <p className='text-[24px] leading-[30px] font-light text-[#000000]'>
                   {value.description}
                 </p>
               </div>

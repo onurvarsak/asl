@@ -108,7 +108,7 @@ ${formData.message}
           {/* Name and Company Row */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             <div>
-              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#444A55]'>
+              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#000000]'>
                 Name und Nachname
               </label>
               <input
@@ -117,11 +117,11 @@ ${formData.message}
                 value={formData.name}
                 onChange={handleChange}
                 placeholder='Name Nachname'
-                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400'
+                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400 text-[#000000]'
               />
             </div>
             <div>
-              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#444A55]'>
+              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#000000]'>
                 Firmenname
               </label>
               <input
@@ -130,7 +130,7 @@ ${formData.message}
                 value={formData.company}
                 onChange={handleChange}
                 placeholder='Ihr Unternehmen'
-                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400'
+                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400 text-[#000000]'
               />
             </div>
           </div>
@@ -138,7 +138,7 @@ ${formData.message}
           {/* Email and Phone Row */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             <div>
-              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#444A55]'>
+              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#000000]'>
                 E-Mail
               </label>
               <input
@@ -147,11 +147,11 @@ ${formData.message}
                 value={formData.email}
                 onChange={handleChange}
                 placeholder='Ihr E-Mail'
-                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400'
+                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400 text-[#000000]'
               />
             </div>
             <div>
-              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#444A55]'>
+              <label className='block text-[18px] leading-[41.23px] font-bold mb-2 uppercase text-[#000000]'>
                 Telefonnummer
               </label>
               <input
@@ -160,14 +160,14 @@ ${formData.message}
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder='+49330323245'
-                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400'
+                className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400 text-[#000000]'
               />
             </div>
           </div>
 
           {/* Message */}
           <div>
-            <label className='block text-sm font-bold mb-2 uppercase'>
+            <label className='block text-sm font-bold mb-2 uppercase text-[#000000]'>
               Ihre Nachricht
             </label>
             <textarea
@@ -176,7 +176,7 @@ ${formData.message}
               onChange={handleChange}
               placeholder='Ihre Nachricht'
               rows={6}
-              className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400 resize-none'
+              className='w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-gray-400 resize-none text-[#000000]'
             />
           </div>
 
@@ -210,7 +210,7 @@ ${formData.message}
           <div className='flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16'>
             <a
               href='tel:+4920393311010'
-              className='flex items-center gap-3 text-2xl lg:text-3xl font-bold hover:text-gray-600 transition-colors'
+              className='flex items-center gap-3 text-2xl lg:text-3xl font-bold text-[#000000] hover:opacity-70 transition-opacity'
             >
               <span>📞</span>
               <span>+49 203 933 11 010</span>
@@ -218,7 +218,7 @@ ${formData.message}
             <div className='hidden lg:block w-px h-12 bg-gray-300'></div>
             <a
               href='mailto:info@als-aknurgmbh.com'
-              className='flex items-center gap-3 text-2xl lg:text-3xl font-bold hover:text-gray-600 transition-colors'
+              className='flex items-center gap-3 text-2xl lg:text-3xl font-bold text-[#000000] hover:opacity-70 transition-opacity'
             >
               <span>✉️</span>
               <span>info@als-aknurgmbh.com</span>

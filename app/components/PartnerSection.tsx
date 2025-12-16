@@ -33,7 +33,7 @@ export default function PartnerSection() {
     <section className='w-full bg-white py-16 px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
-          <p className='text-[26px] leading-[32px] font-light text-center  mx-auto'>
+          <p className='text-[26px] leading-[32px] font-light text-center mx-auto text-[#000000]'>
             Wir arbeiten seit vielen Jahren eng mit unserem wichtigsten
             Logistikpartner zusammen Diese Partnerschaft stärkt die Qualität und
             Zuverlässigkeit unserer täglichen Abläufe zusätzlich

@@ -36,17 +36,17 @@ export default function LocationsSection() {
               </div>
 
               {/* Address */}
-              <p className='text-[24px] leading-[30px] font-light mb-1'>
+              <p className='text-[24px] leading-[30px] font-light mb-1 text-[#000000]'>
                 {location.address}
               </p>
-              <p className='text-[24px] leading-[30px] font-light mb-4'>
+              <p className='text-[24px] leading-[30px] font-light mb-4 text-[#000000]'>
                 {location.city}
               </p>
 
               {/* Email */}
               <a
                 href={`mailto:${location.email}`}
-                className='text-[24px] leading-[30px] font-light hover:underline'
+                className='text-[24px] leading-[30px] font-light hover:underline text-[#000000]'
               >
                 {location.email}
               </a>
