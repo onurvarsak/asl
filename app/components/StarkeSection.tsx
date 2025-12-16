@@ -3,67 +3,107 @@ import Image from "next/image"
 
 export default function StarkeSection() {
   return (
-    <section className='relative w-full bg-white h-[292px] overflow-hidden'>
-      {/* SM */}
-      <Image
-        src={getImagePath('/images/starke-sm.png')}
-        alt='Starke'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover md:hidden'
-      />
-      {/* MD */}
-      <Image
-        src={getImagePath('/images/starke-md.png')}
-        alt='Starke'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden md:block lg:hidden'
-      />
-      {/* LG */}
-      <Image
-        src={getImagePath('/images/starke-lg.png')}
-        alt='Starke'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden lg:block xl:hidden'
-      />
-      {/* XL */}
-      <Image
-        src={getImagePath('/images/starke-xl.png')}
-        alt='Starke'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden xl:block 2xl:hidden'
-      />
-      {/* 2XL */}
-      <Image
-        src={getImagePath('/images/starke-2xl.png')}
-        alt='Starke'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden 2xl:block 3xl:hidden'
-      />
-      {/* 3XL (1800px+) */}
-      <Image
-        src={getImagePath('/images/starke-1800.png')}
-        alt='Starke'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden 3xl:block'
-      />
+    <section className='relative w-full bg-white overflow-hidden'>
+      {/* Text Overlay */}
+      <div className='absolute inset-0 z-10 flex items-center sm:items-start justify-start pl-[20px] sm:pl-[44px] lg:pl-[59px] xl:pl-[106px] 2xl:pl-[84px] 3xl:pl-[212px] sm:pt-[78px] lg:pt-[77px]'>
+        <h2 className='text-[#FFFFFF] text-[20px] min-[400px]:text-[28px] sm:text-[46px] md:text-[48px] lg:text-[46px] xl:text-[46px] 2xl:text-[46px] 3xl:text-[46px] font-bold leading-[24.11px] min-[400px]:leading-[34px] sm:leading-[52px] lg:leading-[52px] xl:leading-[52px] 2xl:leading-[52px] 3xl:leading-[52px] tracking-[0%] max-w-[600px] font-poppins'>
+          Starke
+          <br />
+          Partnerschaften
+        </h2>
+      </div>
+
+      {/* 300px altı */}
+      <div className='relative w-full h-auto min-[300px]:hidden'>
+        <Image
+          src={getImagePath("/images/300/partners 2.png")}
+          alt='Starke'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={300}
+          height={167}
+        />
+      </div>
+      {/* 300px - md arası (640px) */}
+      <div className='relative w-full h-auto hidden min-[300px]:block md:hidden'>
+        <Image
+          src={getImagePath("/images/640/partners 2.png")}
+          alt='Starke'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={640}
+          height={356}
+        />
+      </div>
+      {/* md - lg arası (768px) */}
+      <div className='relative w-full h-auto hidden md:block lg:hidden'>
+        <Image
+          src={getImagePath("/images/768/partners 2.png")}
+          alt='Starke'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={768}
+          height={427}
+        />
+      </div>
+      {/* lg - xl arası (1024px) */}
+      <div className='relative w-full h-auto hidden lg:block xl:hidden'>
+        <Image
+          src={getImagePath("/images/1024/partners 1.png")}
+          alt='Starke'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1024}
+          height={569}
+        />
+      </div>
+      {/* xl - 2xl arası (1280px) */}
+      <div className='relative w-full h-auto hidden xl:block 2xl:hidden'>
+        <Image
+          src={getImagePath("/images/1280/partners 1.png")}
+          alt='Starke'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1280}
+          height={711}
+        />
+      </div>
+      {/* 2xl - 3xl arası (1536px) */}
+      <div className='relative w-full h-auto hidden 2xl:block 3xl:hidden'>
+        <Image
+          src={getImagePath("/images/1536/partners 1.png")}
+          alt='Starke'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1536}
+          height={854}
+        />
+      </div>
+      {/* 3xl ve üzeri (1800px+) */}
+      <div className='relative w-full h-auto hidden 3xl:block'>
+        <Image
+          src={getImagePath("/images/1800/partners 1.png")}
+          alt='Starke'
+          priority
+          sizes='100vw'
+          quality={90}
+          className='w-full h-auto'
+          width={1800}
+          height={1000}
+        />
+      </div>
     </section>
   )
 }

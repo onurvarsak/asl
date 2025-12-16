@@ -44,7 +44,7 @@ export default function PartnerSection() {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className='flex items-center justify-center w-full h-[150px]'
+              className='flex items-center justify-center w-full h-[150px] p-4'
             >
               <Image
                 src={partner.logo}
@@ -52,9 +52,9 @@ export default function PartnerSection() {
                 width={partner.width}
                 height={partner.height}
                 priority
-                sizes='100vw'
+                sizes='(max-width: 640px) 100vw, 50vw'
                 quality={90}
-                className='object-cover max-w-full max-h-full'
+                className='object-contain max-w-full max-h-full'
               />
             </div>
           ))}

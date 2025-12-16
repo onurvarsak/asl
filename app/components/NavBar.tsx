@@ -51,7 +51,11 @@ export default function NavBar() {
                   href={item.href}
                   className='relative h-full flex items-center'
                 >
-                  <span className='text-white hover:text-gray-300 text-[22px] font-bold font-poppins leading-[100%] tracking-[0%] transition-colors duration-200 px-3'>
+                  <span
+                    className={`text-[22px] font-bold font-poppins leading-[100%] tracking-[0%] transition-colors duration-200 px-3 ${
+                      isActive ? "text-white" : "text-white/90 hover:text-white"
+                    }`}
+                  >
                     {item.title}
                   </span>
                   {isActive && (
@@ -120,13 +124,13 @@ export default function NavBar() {
               className='text-white hover:text-gray-300 focus:outline-none relative w-[30px] h-[30px]'
             >
               <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] -rotate-45'></div>
-              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] rotate-[-135deg] opacity-100'></div>
+              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] rotate-135 opacity-100'></div>
             </button>
           </div>
 
           {/* Menu Items */}
           <div className='pl-[42px] md:pl-[62px] pr-[42px] md:pr-[62px] pt-[60px]'>
-            {menuItems.map((item, index) => {
+            {menuItems.map(item => {
               const isActive = pathname === item.href
               return (
                 <div key={item.href}>
