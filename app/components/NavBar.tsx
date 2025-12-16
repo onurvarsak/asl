@@ -127,8 +127,8 @@ export default function NavBar() {
               onClick={() => setIsMenuOpen(false)}
               className='text-white hover:text-gray-300 focus:outline-none relative w-[30px] h-[30px]'
             >
-              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] -rotate-45'></div>
-              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] rotate-135 opacity-100'></div>
+              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] rotate-45 -translate-y-1/2'></div>
+              <div className='absolute top-1/2 left-0 w-[30px] h-[5px] bg-white rounded-[4px] -rotate-45 -translate-y-1/2'></div>
             </button>
           </div>
 
