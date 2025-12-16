@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className='w-full bg-black text-white py-12 px-8'>
       <div className='max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-8'>
         {/* Logo */}
-        <div className='flex-shrink-0'>
+        <div className='shrink-0'>
           <Image
             src={getImagePath("/images/logo.png")}
             alt='ALS GmbH'
@@ -32,22 +32,32 @@ export default function Footer() {
         <div className='flex flex-col items-center lg:items-end gap-6'>
           {/* Social Media Links */}
           <div className='flex gap-4'>
-            {socialLinks.map(social => (
-              <Link
-                key={social.name}
-                href={social.url}
-                className='w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors'
-                aria-label={social.name}
-              >
-                <span className='text-lg font-bold'>
-                  {social.icon === "facebook" && "f"}
-                  {social.icon === "x" && "𝕏"}
-                  {social.icon === "instagram" && "📷"}
-                  {social.icon === "youtube" && "▶"}
-                  {social.icon === "linkedin" && "in"}
-                </span>
-              </Link>
-            ))}
+            {socialLinks.map(social => {
+              const iconMap: { [key: string]: string } = {
+                facebook: "/images/icons/facebook.png",
+                x: "/images/icons/twitter.png",
+                instagram: "/images/icons/instagram.png",
+                youtube: "/images/icons/youtube.png",
+                linkedin: "/images/icons/linkedin.png"
+              }
+
+              return (
+                <Link
+                  key={social.name}
+                  href={social.url}
+                  className='w-10 h-10 flex items-center justify-center hover:opacity-70 transition-opacity'
+                  aria-label={social.name}
+                >
+                  <Image
+                    src={getImagePath(iconMap[social.icon])}
+                    alt={social.name}
+                    width={32}
+                    height={32}
+                    className='object-contain brightness-0 invert'
+                  />
+                </Link>
+              )
+            })}
           </div>
 
           {/* Address */}

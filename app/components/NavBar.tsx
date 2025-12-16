@@ -44,7 +44,11 @@ export default function NavBar() {
           {/* Desktop Menu */}
           <div className='hidden lg:flex gap-[76px] h-full items-center mr-[78px] [@media(min-width:1800px)]:mr-[210px]'>
             {menuItems.map(item => {
-              const isActive = pathname === item.href
+              // Normalize paths - remove trailing slashes and compare
+              const normalizedPathname = pathname?.replace(/\/$/, "") || "/"
+              const normalizedHref = item.href.replace(/\/$/, "") || "/"
+              const isActive = normalizedPathname === normalizedHref
+
               return (
                 <Link
                   key={item.href}
@@ -131,7 +135,11 @@ export default function NavBar() {
           {/* Menu Items */}
           <div className='pl-[42px] md:pl-[62px] pr-[42px] md:pr-[62px] pt-[60px]'>
             {menuItems.map(item => {
-              const isActive = pathname === item.href
+              // Normalize paths - remove trailing slashes and compare
+              const normalizedPathname = pathname?.replace(/\/$/, "") || "/"
+              const normalizedHref = item.href.replace(/\/$/, "") || "/"
+              const isActive = normalizedPathname === normalizedHref
+
               return (
                 <div key={item.href}>
                   <Link

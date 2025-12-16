@@ -210,7 +210,7 @@ ${formData.message}
           <div className='flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16'>
             <a
               href='tel:+4920393311010'
-              className='flex items-center gap-3 text-2xl lg:text-3xl font-bold text-[#000000] hover:opacity-70 transition-opacity'
+              className='flex flex-col lg:flex-row items-center gap-3 text-2xl lg:text-3xl font-bold text-[#000000] hover:opacity-70 transition-opacity text-center lg:text-left'
             >
               <span>📞</span>
               <span>+49 203 933 11 010</span>
@@ -218,7 +218,7 @@ ${formData.message}
             <div className='hidden lg:block w-px h-12 bg-gray-300'></div>
             <a
               href='mailto:info@als-aknurgmbh.com'
-              className='flex items-center gap-3 text-2xl lg:text-3xl font-bold text-[#000000] hover:opacity-70 transition-opacity'
+              className='flex flex-col lg:flex-row items-center gap-3 text-2xl lg:text-3xl font-bold text-[#000000] hover:opacity-70 transition-opacity text-center lg:text-left'
             >
               <span>✉️</span>
               <span>info@als-aknurgmbh.com</span>
