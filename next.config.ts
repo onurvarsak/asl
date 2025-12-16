@@ -2,12 +2,10 @@ import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/asl",
-  assetPrefix: "/asl",
-  images: { unoptimized: true }, // GitHub Pages için önemli
-  trailingSlash: true, // GitHub Pages için önemli
+  images: { unoptimized: true },
+  trailingSlash: true,
   env: {
-    NEXT_PUBLIC_BASE_PATH: "/asl"
+    NEXT_PUBLIC_BASE_PATH: ""
   }
 }
 
