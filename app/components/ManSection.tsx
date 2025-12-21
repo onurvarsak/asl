@@ -90,7 +90,6 @@ export default function ManSection() {
           height={356}
         />
       </div>
-      <div className='relative z-10'>{/* İçerik buraya eklenecek */}</div>
     </section>
   )
 }
