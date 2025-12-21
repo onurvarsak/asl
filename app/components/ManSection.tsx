@@ -66,7 +66,7 @@ export default function ManSection() {
           height={356}
         />
       </div>
-      <div className='relative w-full h-auto hidden 2xl:block 3xl:hidden'>
+      <div className='relative w-full h-auto hidden 2xl:block 3xl:!hidden'>
         <Image
           src={getImagePath("/images/man-2xl.png")}
           alt='Man'
