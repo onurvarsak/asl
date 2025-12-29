@@ -1,13 +1,8 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Poppins } from "next/font/google"
 import "./globals.css"
-import {
-  NavBar,
-  TopSection,
-  MapSection,
-  ContactFormSection,
-  Footer
-} from "./components"
+import { NavBar, TopSection, Footer } from "./components"
+import ConditionalSections from "./components/ConditionalSections"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,8 +42,7 @@ export default function RootLayout({
         <NavBar />
         <TopSection />
         {children}
-        <MapSection />
-        <ContactFormSection />
+        <ConditionalSections />
         <Footer />
       </body>
     </html>

@@ -65,6 +65,25 @@ export default function Footer() {
             <p className='text-sm'>Friedrich-Alfredstr.182 47226 Duisburg</p>
           </div>
 
+          {/* Legal Links */}
+          <div className='text-center lg:text-right'>
+            <div className='flex gap-4 justify-center lg:justify-end'>
+              <Link
+                href='/datenschutz'
+                className='text-sm text-gray-400 hover:text-white transition-colors underline'
+              >
+                Datenschutz
+              </Link>
+              <span className='text-gray-400'>|</span>
+              <Link
+                href='/impressum'
+                className='text-sm text-gray-400 hover:text-white transition-colors underline'
+              >
+                Impressum
+              </Link>
+            </div>
+          </div>
+
           {/* Copyright */}
           <div className='text-center lg:text-right'>
             <p className='text-sm'>
