@@ -33,7 +33,6 @@ export default function FiloSection() {
         <Image
           src={getImagePath("/images/640/filo 1.png")}
           alt='Filo'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -46,7 +45,6 @@ export default function FiloSection() {
         <Image
           src={getImagePath("/images/768/filo 1.png")}
           alt='Filo'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -59,7 +57,6 @@ export default function FiloSection() {
         <Image
           src={getImagePath("/images/1024/filo 1.png")}
           alt='Filo'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -72,7 +69,6 @@ export default function FiloSection() {
         <Image
           src={getImagePath("/images/1280/filo 1.png")}
           alt='Filo'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -85,7 +81,6 @@ export default function FiloSection() {
         <Image
           src={getImagePath("/images/1536/filo 1.png")}
           alt='Filo'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -98,7 +93,6 @@ export default function FiloSection() {
         <Image
           src={getImagePath("/images/1800/filo 1.png")}
           alt='Filo'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'

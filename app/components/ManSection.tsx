@@ -22,7 +22,6 @@ export default function ManSection() {
         <Image
           src={getImagePath("/images/man-sm.png")}
           alt='Man'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -34,7 +33,6 @@ export default function ManSection() {
         <Image
           src={getImagePath("/images/man-md.png")}
           alt='Man'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -46,7 +44,6 @@ export default function ManSection() {
         <Image
           src={getImagePath("/images/man-lg.png")}
           alt='Man'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -58,7 +55,6 @@ export default function ManSection() {
         <Image
           src={getImagePath("/images/man-xl.png")}
           alt='Man'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -70,7 +66,6 @@ export default function ManSection() {
         <Image
           src={getImagePath("/images/man-2xl.png")}
           alt='Man'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -82,7 +77,6 @@ export default function ManSection() {
         <Image
           src={getImagePath("/images/man-1800.png")}
           alt='Man'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'

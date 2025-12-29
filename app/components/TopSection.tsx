@@ -6,65 +6,72 @@ export default function TopSection() {
   return (
     <section className='relative w-full h-[628px] overflow-hidden'>
       {/* Mobile image */}
-      <Image
-        src={getImagePath("/images/truck-sm.png")}
-        alt='Banner'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover md:hidden'
-      />
+      <div className='absolute inset-0 md:hidden'>
+        <Image
+          src={getImagePath("/images/truck-sm.png")}
+          alt='Banner'
+          fill
+          priority
+          sizes='100vw'
+          quality={90}
+          className='object-cover'
+        />
+      </div>
       {/* MD image */}
-      <Image
-        src={getImagePath("/images/truck-md.png")}
-        alt='Banner'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden md:block lg:hidden'
-      />
+      <div className='absolute inset-0 hidden md:block lg:hidden'>
+        <Image
+          src={getImagePath("/images/truck-md.png")}
+          alt='Banner'
+          fill
+          sizes='100vw'
+          quality={90}
+          className='object-cover'
+        />
+      </div>
       {/* LG image */}
-      <Image
-        src={getImagePath("/images/truck-lg.png")}
-        alt='Banner'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden lg:block xl:hidden'
-      />
+      <div className='absolute inset-0 hidden lg:block xl:hidden'>
+        <Image
+          src={getImagePath("/images/truck-lg.png")}
+          alt='Banner'
+          fill
+          sizes='100vw'
+          quality={90}
+          className='object-cover'
+        />
+      </div>
       {/* XL image */}
-      <Image
-        src={getImagePath("/images/truck-xl.png")}
-        alt='Banner'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden xl:block 2xl:hidden'
-      />
+      <div className='absolute inset-0 hidden xl:block 2xl:hidden'>
+        <Image
+          src={getImagePath("/images/truck-xl.png")}
+          alt='Banner'
+          fill
+          sizes='100vw'
+          quality={90}
+          className='object-cover'
+        />
+      </div>
       {/* 2XL image */}
-      <Image
-        src={getImagePath("/images/truck-2xl.png")}
-        alt='Banner'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden 2xl:block 3xl:hidden'
-      />
+      <div className='absolute inset-0 hidden 2xl:block 3xl:hidden!'>
+        <Image
+          src={getImagePath("/images/truck-2xl.png")}
+          alt='Banner'
+          fill
+          sizes='100vw'
+          quality={90}
+          className='object-cover'
+        />
+      </div>
       {/* 1800px and up image */}
-      <Image
-        src={getImagePath("/images/truck-1800.png")}
-        alt='Banner'
-        fill
-        priority
-        sizes='100vw'
-        quality={90}
-        className='object-cover hidden 3xl:block'
-      />
+      <div className='absolute inset-0 hidden 3xl:block'>
+        <Image
+          src={getImagePath("/images/truck-1800.png")}
+          alt='Banner'
+          fill
+          sizes='100vw'
+          quality={90}
+          className='object-cover'
+        />
+      </div>
       {/* Dark overlay for better text readability */}
       <div className='absolute inset-0 bg-black/30' />
 

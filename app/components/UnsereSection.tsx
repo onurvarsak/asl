@@ -31,7 +31,6 @@ export default function UnsereSection() {
         <Image
           src={getImagePath("/images/640/ourcompa 1.png")}
           alt='Unsere'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -44,7 +43,6 @@ export default function UnsereSection() {
         <Image
           src={getImagePath("/images/768/ourcompa 1.png")}
           alt='Unsere'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -57,7 +55,6 @@ export default function UnsereSection() {
         <Image
           src={getImagePath("/images/1024/ourcompa 1.png")}
           alt='Unsere'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -70,7 +67,6 @@ export default function UnsereSection() {
         <Image
           src={getImagePath("/images/1280/ourcompa 1.png")}
           alt='Unsere'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -83,7 +79,6 @@ export default function UnsereSection() {
         <Image
           src={getImagePath("/images/1536/ourcompa 1.png")}
           alt='Unsere'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -96,7 +91,6 @@ export default function UnsereSection() {
         <Image
           src={getImagePath("/images/1800/ourcompa 1.png")}
           alt='Unsere'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'

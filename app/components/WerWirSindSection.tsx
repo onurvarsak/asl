@@ -22,7 +22,6 @@ export default function WerWirSindSection() {
         <Image
           src={getImagePath("/images/wws-sm.png")}
           alt='Wer Wir Sind'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -34,7 +33,6 @@ export default function WerWirSindSection() {
         <Image
           src={getImagePath("/images/wws-md.png")}
           alt='Wer Wir Sind'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -46,7 +44,6 @@ export default function WerWirSindSection() {
         <Image
           src={getImagePath("/images/wws-lg.png")}
           alt='Wer Wir Sind'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -58,7 +55,6 @@ export default function WerWirSindSection() {
         <Image
           src={getImagePath("/images/wws-xl.png")}
           alt='Wer Wir Sind'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -70,7 +66,6 @@ export default function WerWirSindSection() {
         <Image
           src={getImagePath("/images/wws-2xl.png")}
           alt='Wer Wir Sind'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
@@ -82,7 +77,6 @@ export default function WerWirSindSection() {
         <Image
           src={getImagePath("/images/wws-1800.png")}
           alt='Wer Wir Sind'
-          priority
           sizes='100vw'
           quality={90}
           className='w-full h-auto'
