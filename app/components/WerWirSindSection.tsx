@@ -66,7 +66,7 @@ export default function WerWirSindSection() {
           height={356}
         />
       </div>
-      <div className='relative w-full h-auto hidden 2xl:block 3xl:hidden'>
+      <div className='relative w-full h-auto hidden 2xl:block 3xl:hidden!'>
         <Image
           src={getImagePath("/images/wws-2xl.png")}
           alt='Wer Wir Sind'
@@ -90,7 +90,6 @@ export default function WerWirSindSection() {
           height={356}
         />
       </div>
-      <div className='relative z-10'>{/* İçerik buraya eklenecek */}</div>
     </section>
   )
 }
