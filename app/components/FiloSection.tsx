@@ -81,7 +81,7 @@ export default function FiloSection() {
         />
       </div>
       {/* 2xl - 3xl arası (1536px) */}
-      <div className='relative w-full h-auto hidden 2xl:block 3xl:hidden'>
+      <div className='relative w-full h-auto hidden 2xl:block 3xl:hidden!'>
         <Image
           src={getImagePath("/images/1536/filo 1.png")}
           alt='Filo'
