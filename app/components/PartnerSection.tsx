@@ -26,6 +26,12 @@ export default function PartnerSection() {
       logo: getImagePath("/images/logo-hellmann.png"),
       width: 434,
       height: 222
+    },
+    {
+      name: "Gebrüder",
+      logo: getImagePath("/images/logo-gebrüder.png"),
+      width: 300,
+      height: 100
     }
   ]
 
